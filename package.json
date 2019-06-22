@@ -24,6 +24,7 @@
     "install-android": "node ./scripts/install-android",
     "uninstall-android": "cd playground/android && ./gradlew uninstallAll",
     "clean": "node ./scripts/clean",
+    "prepare": "npm run build",
     "prestart": "npm run build",
     "start": "node ./scripts/start",
     "pretest-js": "npm run build",
