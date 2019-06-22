@@ -13,11 +13,15 @@
 @implementation RNNUIBarButtonItem
 
 -(instancetype)init:(NSString*)buttonId withIcon:(UIImage*)iconImage {
-	UIButton* button = [[UIButton alloc] init];
-	[button addTarget:self action:@selector(onButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-	[button setImage:iconImage forState:UIControlStateNormal];
-	[button setFrame:CGRectMake(0, 0, iconImage.size.width, iconImage.size.height)];
-	self = [super initWithCustomView:button];
+	//	UIButton* button = [[UIButton alloc] init];
+	//	[button addTarget:self action:@selector(onButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+	//	[button setImage:iconImage forState:UIControlStateNormal];
+	//	[button setFrame:CGRectMake(0, 0, iconImage.size.width, iconImage.size.height)];
+	//	[[button layer] setBorderColor:[UIColor colorWithRed:1 green:0 blue:0 alpha:1.0].CGColor];
+	//	[[button layer] setBorderWidth:1];
+	//	self = [super initWithCustomView:button];
+	//	self.buttonId = buttonId;
+	self = [self initWithImage:iconImage style:UIBarButtonItemStylePlain target:self action:@selector(onButtonPressed)];
 	self.buttonId = buttonId;
 	return self;
 }
